@@ -1,0 +1,10 @@
+.Wrapper{
+    justify-content: center;
+    display: flex;
+}
+button{
+    padding: 2px;
+}
+.Wrapper h4{
+    color: black
+}
