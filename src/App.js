@@ -1,18 +1,20 @@
-import React from 'react'
-import Employee from './Employee'
+import React, { useEffect, useState } from 'react'
+import Counter from './Counter'
 function App() {
-  let Emp = [{ name: "Jhon P", age: 12, place: "Kannur" },
-  { name: "Fahad", age: 19, place: "Calicut" },
-  { name: "Ubaid ok", age: 13, place: "Malappuram" },
-  ]
+  const [show, Setshow] = useState(false);
+  const [count,Setcount]=useState(0);
+  useEffect(()=>{
+    console.log("Use Effect Working");
+    
+  })
   return (
     <div>
+      <button onClick={() => Setshow(!show)}>Click here</button>
       {
-        Emp.map((obj, index) => {
-          return (<Employee key={index} {...obj} />)
-        })
+        show ? <Counter /> : null
       }
+      <button onClick={()=>Setcount(count+1)}>Add</button>
     </div>
   )
 }
-export default App
+export default App 
