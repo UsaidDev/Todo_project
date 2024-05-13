@@ -2,10 +2,8 @@ import React, { useEffect, useState } from 'react'
 import Counter from './Counter'
 function App() {
   const [show, Setshow] = useState(false);
-  const [count,Setcount]=useState(0);
-  useEffect(()=>{
+  useEffect(() => {
     console.log("Use Effect Working");
-    
   })
   return (
     <div>
@@ -13,8 +11,7 @@ function App() {
       {
         show ? <Counter /> : null
       }
-      <button onClick={()=>Setcount(count+1)}>Add</button>
     </div>
   )
 }
-export default App 
+export default App;
