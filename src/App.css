@@ -1,0 +1,62 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.todo {
+    height: 100px;
+    width: 400px;
+    background-color: #fff;
+    margin: auto;
+    margin-top: 40px;
+    border-radius: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+.todo h2 {
+    text-align: center;
+    font-size: 20px;
+    font-family: sans-serif;
+    padding-top: 10px;
+}
+.add_option {
+    display: flex;
+}
+.add_option button {
+    background-color: green;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 10px;
+    margin-right: 5px;
+}
+.todo input {
+    justify-content: center;
+    margin: auto;
+    display: block;
+    width: 67%;
+    padding: 10px;
+    margin-top: 10px;
+    outline: none;
+}
+.todo_option {
+    width: 90%;
+    background-color: #fff;
+    margin: auto;
+    margin-top: 30px;
+    padding: 10px;
+    display: block;
+    border-radius: 5px;
+    font-family: sans-serif;
+    font-size: 14px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+.todo_option p{
+    margin: 5px;
+}
+.todo_option button{
+    right: 0;
+    margin: 5px;
+}
