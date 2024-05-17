@@ -3,11 +3,19 @@ import './App.css'
 
 function App() {
     const AddItem = () => {
-        console.log(toDo)
-        setTodos([...toDos, { id: Date.now(), text: toDo, status: false }])
+        SetTodo("")
+        setTodos([...toDos, { id: Date.now(), text: toDo}])
     }
+
     const [toDos, setTodos] = useState([])// Store Datas using Array
-    const [toDo, SetTodo] = useState("") //Input box value Store
+    const [toDo, SetTodo] = useState(""); //Input box value Store
+
+    const handleDelete=(id)=>{
+        const RemoveItem = toDos.filter((todo)=>{
+            return todo.id !== id;//Delete Data in an Array
+        })
+        setTodos(RemoveItem);
+    }
     return (
         <div className='App'>
             <div className="todo">
@@ -16,16 +24,12 @@ function App() {
                     <input value={toDo} type="text" onChange={(e) => SetTodo(e.target.value)} placeholder='Search name...' />
                     <button onClick={AddItem}>Add todo</button>
                 </div>
-                {toDos.map((value) => {
+                {toDos.map((obj,index) => {
                     return (
                         <>
-                            <div className='todo_option'>
-                                <p>{value.text}</p>
-                                <input type="checkbox" onChange={(e) => console.log(e.target.value, console.log(value))} value={value.status} name="" id="" />
-                                <button>Remove</button>
-                                {
-                                    console.log(value.status)
-                                }
+                            <div className='todo_option' key={index}>
+                                <p>{obj.text}</p>
+                                <button onClick={()=>handleDelete(obj.id)}>Remove</button>
                             </div>
                         </>
                     )
